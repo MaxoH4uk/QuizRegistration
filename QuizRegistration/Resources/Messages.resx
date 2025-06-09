@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="ResourseNotFoundError" xml:space="preserve">
+        <value>Ресурс {0} не найден.</value>
+    </data>
+    <data name="RunApplicationErrorTitle" xml:space="preserve">
+        <value>Ошибка запуска приложения</value>
+    </data>
+    <data name="GameDateMsg" xml:space="preserve">
+        <value>Дата игры: {0}</value>
+    </data>
+    <data name="RegDateMsg" xml:space="preserve">
+        <value>Регистрация: {0}</value>
+    </data>
+    <data name="GamePlaceMsg" xml:space="preserve">
+        <value>Место игры: {0} ({1})</value>
+    </data>
+    <data name="SelectGameMsg" xml:space="preserve">
+        <value>Выберите игру!</value>
+    </data>
+    <data name="SelectTeamMsg" xml:space="preserve">
+        <value>Выберите команду!</value>
+    </data>
+    <data name="SelectCaptainNameMsg" xml:space="preserve">
+        <value>Укажите имя капитана!</value>
+    </data>
+    <data name="SelectCaptainPhoneMsg" xml:space="preserve">
+        <value>Укажите номер телефона капитана!</value>
+    </data>
+    <data name="SendRegistrationMsg" xml:space="preserve">
+        <value>Запрос регистрации на игру {0} отправлен. Регистрация откроется в {1}.
+
+</value>
+    </data>
+    <data name="SuccessRegistrationMsg" xml:space="preserve">
+        <value>Вы успешно зарегистрировались на игру {0} в {1}
+
+</value>
+    </data>
+    <data name="GamesTabTitle" xml:space="preserve">
+        <value>Список актуальных регистраций на игры</value>
+    </data>
+    <data name="NoRegistrationsMsg" xml:space="preserve">
+        <value>Нет регистраций на игры :(</value>
+    </data>
+    <data name="PlayersCountMsg" xml:space="preserve">
+        <value>Количество игроков: {0}</value>
+    </data>
+    <data name="RegistrationDateMsg" xml:space="preserve">
+        <value>Дата регистрации: {0}</value>
+    </data>
+    <data name="CancelRegistrationMsg" xml:space="preserve">
+        <value>Отменить регистрацию</value>
+    </data>
+    <data name="SuccessfulGameCancellation" xml:space="preserve">
+        <value>Регистрация на игру успешно отменена!</value>
+    </data>
+    <data name="ErrorGameCancellation" xml:space="preserve">
+        <value>Возникла ошибка при отмене игры, попробуйте еще раз!</value>
+    </data>
+    <data name="UnhandledExceptionMsg" xml:space="preserve">
+        <value>Произошло неожиданное исключение. Программа завершает свою работу.</value>
+    </data>
+    <data name="GetGamesListError" xml:space="preserve">
+        <value>Произошла ошибка при получении списка игр</value>
+    </data>
+    <data name="AuthorizationError" xml:space="preserve">
+        <value>Ошибка при авторизации! Проверьте введенный email и пароль!
+{
+
+0}</value>
+    </data>
+    <data name="ServerError" xml:space="preserve">
+        <value>Ошибка обработки ответа сервера.
+{0}</value>
+    </data>
+    <data name="GetUserDataError" xml:space="preserve">
+        <value>Ошибка при получении данных пользователя! Статус код {0}</value>
+    </data>
+    <data name="NetworkError" xml:space="preserve">
+        <value>Ошибка сети при получении данных пользователя {0}</value>
+    </data>
+    <data name="UserDataFormatError" xml:space="preserve">
+        <value>Неверный формат пользовательских данных, полученных с сервера {0}</value>
+    </data>
+</root>
