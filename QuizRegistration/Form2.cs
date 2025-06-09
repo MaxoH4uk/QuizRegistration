@@ -179,10 +179,15 @@ public partial class Form2 : Form
         }
     }
 
-    private async void guna2TabControl1_SelectedIndexChanged(object sender, EventArgs e)
+    private void guna2TabControl1_SelectedIndexChanged(object sender, EventArgs e)
     {
         if (formTabs.SelectedTab != gamesTab) return;
 
+        ShowActualGames();
+    }
+
+    private async void ShowActualGames()
+    {
         gamesTab.Controls.Clear();
 
         var gamesRegistrations = await _gameService.GetActualGamesRegistrations();
@@ -340,8 +345,8 @@ public partial class Form2 : Form
 
         if (deletionResponse.StatusCode == HttpStatusCode.OK)
         {
-            gamesTab.Refresh();
             MessageBox.Show(Program.GetResourceString("SuccessfulGameCancellation"));
+            ShowActualGames();
         }
         else
         {
