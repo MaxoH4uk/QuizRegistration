@@ -219,6 +219,7 @@ namespace QuizRegistration
             this.MinimumSize = new System.Drawing.Size(850, 850);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "QuizRegistration";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

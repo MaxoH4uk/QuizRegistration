@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Drawing;
 
 namespace QuizRegistration
 {
@@ -64,6 +65,7 @@ namespace QuizRegistration
             this.registrationLogInput = new System.Windows.Forms.RichTextBox();
             this.captainNameInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.choosePlayersCountField = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.informationMessages = new System.Windows.Forms.Label();
             this.gamesTab = new System.Windows.Forms.TabPage();
             this.helpTab = new System.Windows.Forms.TabPage();
             this.faqLabel = new System.Windows.Forms.Label();
@@ -138,9 +140,10 @@ namespace QuizRegistration
             this.tableLayoutPanel1.Controls.Add(this.registrationDateLabel, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.gameBanner, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.gameSeparator, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.registrationLogInput, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.registrationLogInput, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.captainNameInput, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.choosePlayersCountField, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.informationMessages, 1, 6);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -364,13 +367,14 @@ namespace QuizRegistration
             // registrationLogInput
             // 
             this.registrationLogInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.registrationLogInput.BackColor = System.Drawing.Color.White;
             this.registrationLogInput.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.registrationLogInput.Location = new System.Drawing.Point(630, 375);
+            this.registrationLogInput.Location = new System.Drawing.Point(630, 423);
             this.registrationLogInput.Margin = new System.Windows.Forms.Padding(53, 3, 3, 3);
             this.registrationLogInput.Name = "registrationLogInput";
             this.registrationLogInput.ReadOnly = true;
-            this.tableLayoutPanel1.SetRowSpan(this.registrationLogInput, 9);
-            this.registrationLogInput.Size = new System.Drawing.Size(531, 510);
+            this.tableLayoutPanel1.SetRowSpan(this.registrationLogInput, 8);
+            this.registrationLogInput.Size = new System.Drawing.Size(531, 462);
             this.registrationLogInput.TabIndex = 999;
             this.registrationLogInput.Text = "";
             // 
@@ -419,6 +423,18 @@ namespace QuizRegistration
             this.choosePlayersCountField.TabIndex = 3;
             this.choosePlayersCountField.Value = new decimal(new int[] { 10, 0, 0, 0 });
             // 
+            // informationMessages
+            // 
+            this.informationMessages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) | System.Windows.Forms.AnchorStyles.Left) | System.Windows.Forms.AnchorStyles.Right)));
+            this.informationMessages.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.informationMessages.Location = new System.Drawing.Point(630, 372);
+            this.informationMessages.Margin = new System.Windows.Forms.Padding(53, 0, 3, 0);
+            this.informationMessages.Name = "informationMessages";
+            this.informationMessages.Size = new System.Drawing.Size(531, 48);
+            this.informationMessages.TabIndex = 1000;
+            this.informationMessages.Text = "Информационные сообщения";
+            this.informationMessages.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // gamesTab
             // 
             this.gamesTab.AutoScroll = true;
@@ -463,6 +479,7 @@ namespace QuizRegistration
             this.MinimumSize = new System.Drawing.Size(900, 870);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "QuizRegistration";
             this.formTabs.ResumeLayout(false);
             this.registrationTab.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -471,6 +488,8 @@ namespace QuizRegistration
             this.helpTab.ResumeLayout(false);
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label informationMessages;
 
         private System.Windows.Forms.Label faqLabel;
 

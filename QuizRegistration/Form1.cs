@@ -17,6 +17,9 @@ public partial class Form1 : Form
     private readonly IConfiguration _config;
     private readonly TokenService _tokenService;
 
+    private readonly string _userDataPath =
+        Environment.GetFolderPath(Environment.SpecialFolder.CommonDocuments) + "UserData.txt";
+
     private Image _closeEyeImg;
 
     private bool _isPasswordHidden = true;
@@ -93,8 +96,8 @@ public partial class Form1 : Form
                 string.Format(
                     Program.GetResourceString("ResourseNotFoundError"),
                     resourceName
-                    )
-                );
+                )
+            );
 
         return Image.FromStream(stream);
     }
@@ -109,13 +112,11 @@ public partial class Form1 : Form
 
     private void ReadUserCretentialsFromFile()
     {
-        const string userDataFilePath = @"UserData.txt";
-
-        var userDataFile = new FileInfo(userDataFilePath);
+        var userDataFile = new FileInfo(_userDataPath);
 
         if (!userDataFile.Exists) return;
 
-        var fileText = File.ReadAllText(userDataFilePath);
+        var fileText = File.ReadAllText(_userDataPath);
         var userData = fileText.Split(';');
 
         var decriptedUserEmail = DecryptString(userData[0]);
@@ -127,11 +128,10 @@ public partial class Form1 : Form
 
     private void WriteUserCretentialsToFile(UserCredentials credentials)
     {
-        const string userDataFilePath = @"UserData.txt";
         var encriptedUserEmail = EncryptString(credentials.Email);
         var encriptedUserPassword = EncryptString(credentials.Password);
 
-        using var fs = File.Create(userDataFilePath);
+        using var fs = File.Create(_userDataPath);
         var info = new UTF8Encoding(true).GetBytes($"{encriptedUserEmail};{encriptedUserPassword}");
         fs.Write(info, 0, info.Length);
     }
